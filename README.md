@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/pete-otaqui/rear-window.svg?branch=master)](https://travis-ci.org/pete-otaqui/rear-window)
 
-Rear window let's you easily create iframes with HTML contents.
+Rear Window lets you easily create iframes with HTML contents.
 
 ## Simple Usage
 
