@@ -22,11 +22,22 @@
   // can return a function as the exported value.
   var RW = {
     create: function(container, options) {
-      var rw, content;
+      var rw, content, attr, attrs, attrValue;
       if ( !options ) {
         options = {};
       }
       rw = doc.createElement('iframe');
+
+      if ( options.iframeAttributes ) {
+        attrs = options.iframeAttributes;
+        for ( attr in attrs ) {
+          attrValue = attrs[attr];
+          if ( attr === 'classString' ) {
+            attr = 'class';
+          }
+          rw.setAttribute(attr, attrValue);
+        }
+      }
       if ( container ) {
         container.appendChild(rw);
       }

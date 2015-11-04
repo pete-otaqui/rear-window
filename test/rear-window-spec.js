@@ -89,6 +89,20 @@ describe('Rear Window', function() {
 
     });
 
+    it('should accept an "iframeAttributes" option', function() {
+      var options = {
+        iframeAttributes: {
+          classString: 'rear-window foo',
+          id: 'rw',
+          frameborder: '0'
+        }
+      };
+      var rw = RW.create(container, options);
+      expect(rw.getAttribute('class')).to.equal('rear-window foo');
+      expect(rw.getAttribute('id')).to.equal('rw');
+      expect(rw.getAttribute('frameborder')).to.equal('0');
+    });
+
   });
 
 
