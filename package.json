@@ -1,0 +1,35 @@
+{
+  "name": "rear-window",
+  "version": "0.1.0",
+  "description": "Iframe manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --singleRun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pete-otaqui/rear-window.git"
+  },
+  "keywords": [
+    "dom",
+    "iframe"
+  ],
+  "author": "Pete Otaqui <pete@otaqui.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pete-otaqui/rear-window/issues"
+  },
+  "homepage": "https://github.com/pete-otaqui/rear-window#readme",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "karma": "^0.13.15",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-mocha": "^0.2.0",
+    "karma-notify-reporter": "^0.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-story-reporter": "^0.3.1",
+    "mocha": "^2.3.3",
+    "phantomjs": "^1.9.18"
+  }
+}
