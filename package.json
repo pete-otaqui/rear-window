@@ -1,6 +1,6 @@
 {
   "name": "rear-window",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Iframe manager",
   "readme": "README.md",
   "main": "index.js",
