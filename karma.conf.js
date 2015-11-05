@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'index.js',
+      'rear-window.js',
       'test/**/*-spec.js',
       {pattern: 'test/style-*.css', included: false}
     ],

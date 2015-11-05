@@ -2,7 +2,7 @@
   "name": "rear-window",
   "version": "0.3.0",
   "description": "Iframe manager",
-  "main": "index.js",
+  "main": "rear-window.js",
   "scripts": {
     "test": "karma start --single-run"
   },
