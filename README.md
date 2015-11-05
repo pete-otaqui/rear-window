@@ -25,9 +25,9 @@ RW.update(iframe, '<h1>New Content</h1><p>Overwrites existing content.</p>');
 
 ## Installation
 
-Rear Window is written with module definition to support:
+Rear Window is written with a module definition to support:
 
-* Global inclusion in a browser, just refer to `rear-window.js`
+* Global inclusion in a browser, just include the `rear-window.js` file and you will get `RW` in the global scope
 * AMD / RequireJS - `require(['rear-window/rear-window'], function(RW) {/* ...*/ })`
 * CommonJS-style / Browserify - `var RW = require('rear-window')`
 
