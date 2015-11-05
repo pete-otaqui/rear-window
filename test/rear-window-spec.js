@@ -89,7 +89,7 @@ describe('Rear Window', function() {
 
     });
 
-    it('should accept an "iframeAttributes" option', function() {
+    it('should support an "iframeAttributes" option', function() {
       var options = {
         iframeAttributes: {
           classString: 'rear-window foo',
