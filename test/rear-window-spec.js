@@ -92,15 +92,23 @@ describe('Rear Window', function() {
     it('should support an "iframeAttributes" option', function() {
       var options = {
         iframeAttributes: {
-          classString: 'rear-window foo',
           id: 'rw',
           frameborder: '0'
         }
       };
       var rw = RW.create(container, options);
-      expect(rw.getAttribute('class')).to.equal('rear-window foo');
       expect(rw.getAttribute('id')).to.equal('rw');
       expect(rw.getAttribute('frameborder')).to.equal('0');
+    });
+
+    it('should substitute classString for class in iframeAttributes', function() {
+      var options = {
+        iframeAttributes: {
+          classString: 'rear-window foo'
+        }
+      };
+      var rw = RW.create(container, options);
+      expect(rw.getAttribute('class')).to.equal('rear-window foo');
     });
 
   });
@@ -114,6 +122,19 @@ describe('Rear Window', function() {
       RW.update(rw, '<p>LOREM</p>');
       var outerHTML = rw.contentDocument.body.firstChild.outerHTML;
       expect(outerHTML).to.equal('<p>LOREM</p>');
+    });
+
+    it('should not affect the HEAD', function() {
+      var options = {
+        styleString: 'body { color: rgb(255, 0, 0); }'
+      };
+      var rw = RW.create(container, options);
+      var head = rw.contentDocument.head;
+      var headStringBefore = head.innerHTML;
+      var headStringAfter;
+      RW.update(rw, '<p>LOREM</p>');
+      headStringAfter = head.innerHTML;
+      expect(headStringBefore).to.equal(headStringAfter);
     });
 
   });
